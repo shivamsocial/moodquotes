@@ -1,16 +1,18 @@
 [
   {
-    "name": "Karan",
+    "name": "Treston",
     "score": 170
   },
+  {
+    "name": "Alex",
+    "score": 120
+  },
+
   {
     "name": "Shivam",
     "score": 130
   },
-  {
-    "name": "Alice",
-    "score": 120
-  },
+
   {
     "name": "Bob",
     "score": 100
@@ -18,13 +20,5 @@
   {
     "name": "Lovelina",
     "score": 100
-  },
-  {
-    "name": "Lovelina",
-    "score": 100
-  },
-  {
-    "name": "Charlie",
-    "score": 90
   }
 ]
