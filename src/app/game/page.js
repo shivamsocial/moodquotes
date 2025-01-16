@@ -1,5 +1,4 @@
 // app/game/page.js
-import Head from "next/head";
 import Question from "../components/Questions";
 import Timer from "../components/Timer";
 import Leaderboard from "../components/Leaderboard";
@@ -16,45 +15,6 @@ export default function GamePage({ title }) {
 
   return (
     <>
-      <Head>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content="Your Name" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Open Graph meta tags */}
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:url" content={siteUrl} />
-
-        {/* Twitter meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@quotesgame" />
-        <meta name="twitter:creator" content="@yourhandle" />
-
-        {/* Structured Data (JSON-LD) */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Game",
-              "name": "Quotes Game - Guess the Quotes Quiz",
-              "description": "${pageDescription}",
-              "url": "${siteUrl}",
-              "author": {
-                "@type": "Person",
-                "name": "Your Name"
-              },
-              "genre": "Trivia",
-              "keywords": "${keywords}"
-            }
-          `}
-        </script>
-
-        {/* Dynamic Title */}
-        <title>{pageTitle}</title>
-      </Head>
-
       <div>
         <h2 className="text-3xl font-bold text-center text-blue-600">
           Quotes Game
