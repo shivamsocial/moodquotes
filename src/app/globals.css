@@ -14,8 +14,36 @@
   }
 }
 
+/* globals.css */
+
+/* Base styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f2937;
+    color: #e5e7eb;
+  }
+}
+
+.bg-gray-50 {
+  background-color: #f8fafc; /* Light background */
+}
+
+.text-gray-800 {
+  color: #1f2937; /* Light text */
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #4f46e5, #ec4899);
 }
