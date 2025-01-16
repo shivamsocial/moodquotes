@@ -5,6 +5,7 @@ import Footer from "../app/components/Footer";
 import ThemeSwitcher from "../app/components/ThemeSwitcher"; // Import the client-side component
 import Head from "next/head";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({ children, title }) {
   const pageTitle = title
@@ -70,6 +71,7 @@ export default function RootLayout({ children, title }) {
         </main>
 
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
