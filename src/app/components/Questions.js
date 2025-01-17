@@ -1,7 +1,16 @@
-// app/game/components/Questions.js
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+
+// Function to shuffle an array randomly
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const questions = [
   {
@@ -142,8 +151,10 @@ export default function Questions({ onComplete }) {
   const [selectedOption, setSelectedOption] = useState("");
   const [playerName, setPlayerName] = useState(""); // Track player name input
 
-  // Add ref for scrolling to leaderboard
-  const leaderboardRef = useRef(null);
+  // Shuffle the questions array at the start
+  const shuffledQuestions = useRef(
+    shuffleArray(questions).slice(0, 10)
+  ).current;
 
   useEffect(() => {
     if (timeLeft <= 0) {
@@ -158,16 +169,16 @@ export default function Questions({ onComplete }) {
 
   const handleAnswer = (selectedOption) => {
     setSelectedOption(selectedOption);
-    const isCorrect = selectedOption === questions[currentQuestion].answer;
+    const isCorrect =
+      selectedOption === shuffledQuestions[currentQuestion].answer;
 
     setFeedback(isCorrect ? "correct" : "incorrect");
-    if (isCorrect) {
-      setScore((prevScore) => prevScore + 10);
-    }
+    // Increment score based on whether the answer is correct or incorrect
+    setScore((prevScore) => prevScore + (isCorrect ? 10 : 0)); // Deduct 5 points for wrong answers
 
     setTimeout(() => {
       setFeedback("");
-      if (currentQuestion + 1 < questions.length) {
+      if (currentQuestion + 1 < shuffledQuestions.length) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
         handleGameEnd();
@@ -241,12 +252,6 @@ export default function Questions({ onComplete }) {
         >
           Play Again
         </button>
-        {/* Leaderboard section */}
-        <div ref={leaderboardRef} className="mt-8">
-          {/* Here, you can render the leaderboard */}
-          <h2 className="text-3xl font-semibold">Leaderboard</h2>
-          {/* Add the leaderboard display logic here */}
-        </div>
       </div>
     );
   }
@@ -272,11 +277,11 @@ export default function Questions({ onComplete }) {
               : ""
           }`}
         >
-          {questions[currentQuestion].question}
+          {shuffledQuestions[currentQuestion].question}
         </h2>
 
         <ul className="space-y-4">
-          {questions[currentQuestion].options.map((option, index) => (
+          {shuffledQuestions[currentQuestion].options.map((option, index) => (
             <li key={index} className="transition-all duration-300">
               <button
                 onClick={() => handleAnswer(option)}
@@ -307,10 +312,15 @@ export default function Questions({ onComplete }) {
           <div
             className="bg-blue-500 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full animate__animated animate__fadeIn"
             style={{
-              width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+              width: `${
+                ((currentQuestion + 1) / shuffledQuestions.length) * 100
+              }%`,
             }}
           >
-            {(((currentQuestion + 1) / questions.length) * 100).toFixed(2)}%
+            {(((currentQuestion + 1) / shuffledQuestions.length) * 100).toFixed(
+              2
+            )}
+            %
           </div>
         </div>
       </div>
