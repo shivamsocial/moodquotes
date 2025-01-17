@@ -7,193 +7,129 @@ const questions = [
   {
     id: 1,
     question: "'The only thing we have to fear is ____ itself.'",
-    options: ["Fear", "Nothing", "Time", "Failure"],
+    options: ["Nothing", "Time", "Failure", "Fear"],
     answer: "Fear",
   },
   {
     id: 2,
     question: "'In the middle of every difficulty lies ____.'",
-    options: ["Opportunity", "Hope", "Fear", "Success"],
+    options: ["Hope", "Fear", "Success", "Opportunity"],
     answer: "Opportunity",
   },
   {
     id: 3,
     question:
       "'It is not the years in your life that count, but the ____ in your years.'",
-    options: ["Joy", "Love", "Passion", "Life"],
+    options: ["Passion", "Life", "Love", "Joy"],
     answer: "Life",
   },
   {
     id: 4,
     question:
       "'Success is not final, failure is not ____: it is the courage to continue that counts.'",
-    options: ["Fatal", "End", "Permanent", "Devastating"],
+    options: ["End", "Fatal", "Devastating", "Permanent"],
     answer: "Fatal",
   },
   {
     id: 5,
     question: "'Be yourself; everyone else is already ____.'",
-    options: ["Taken", "Lost", "Confused", "A copy"],
+    options: ["Lost", "A copy", "Confused", "Taken"],
     answer: "Taken",
   },
   {
     id: 6,
     question: "'The best way to predict the future is to ____ it.'",
-    options: ["Create", "Dream", "Live", "Explore"],
+    options: ["Live", "Explore", "Dream", "Create"],
     answer: "Create",
   },
   {
     id: 7,
     question: "'Don’t cry because it’s over, smile because it’s ____.'",
-    options: ["Done", "Memorable", "Beautiful", "Over"],
+    options: ["Beautiful", "Done", "Memorable", "Over"],
     answer: "Done",
   },
   {
     id: 8,
     question: "'Life is what happens when you're busy making other ____.'",
-    options: ["Plans", "Dreams", "Memories", "Decisions"],
+    options: ["Dreams", "Plans", "Decisions", "Memories"],
     answer: "Plans",
   },
   {
     id: 9,
     question:
       "'To be yourself in a world that is constantly trying to make you something else is the greatest ____.'",
-    options: ["Courage", "Love", "Peace", "Wisdom"],
+    options: ["Wisdom", "Courage", "Love", "Peace"],
     answer: "Courage",
   },
   {
     id: 10,
     question:
       "'Not everything that is faced can be changed, but nothing can be changed until it is ____.'",
-    options: ["Faced", "Accepted", "Thought", "Recognized"],
+    options: ["Accepted", "Thought", "Faced", "Recognized"],
     answer: "Faced",
   },
   {
     id: 11,
     question: "'You miss 100% of the shots you don’t ____.'",
-    options: ["Take", "Make", "Try", "Think"],
+    options: ["Make", "Take", "Try", "Think"],
     answer: "Take",
   },
   {
     id: 12,
     question: "'The only way to do great work is to love what you ____.'",
-    options: ["Do", "Create", "Achieve", "Try"],
+    options: ["Achieve", "Create", "Try", "Do"],
     answer: "Do",
   },
   {
     id: 13,
     question: "'Life is either a daring adventure or nothing at ____.'",
-    options: ["All", "All", "The end", "All at all"],
+    options: ["The end", "All", "All at all", "All"],
     answer: "All",
   },
   {
     id: 14,
     question: "'You must be the change you wish to see in the ____.'",
-    options: ["World", "People", "Universe", "Future"],
+    options: ["Future", "World", "People", "Universe"],
     answer: "World",
   },
   {
     id: 15,
     question:
       "'Happiness is not something ready-made. It comes from your own ____.'",
-    options: ["Actions", "Choice", "Heart", "Thoughts"],
+    options: ["Choice", "Heart", "Thoughts", "Actions"],
     answer: "Actions",
   },
   {
     id: 16,
     question: "'Believe you can and you're ____.'",
-    options: ["Halfway there", "On the road", "There", "Done"],
+    options: ["There", "Halfway there", "On the road", "Done"],
     answer: "Halfway there",
   },
   {
     id: 17,
     question:
       "'Success is not the key to happiness. Happiness is the key to ____.'",
-    options: ["Success", "Wealth", "Love", "Peace"],
+    options: ["Wealth", "Success", "Love", "Peace"],
     answer: "Success",
   },
   {
     id: 18,
     question: "'It always seems impossible until it’s ____.'",
-    options: ["Done", "Achieved", "Completed", "Over"],
+    options: ["Over", "Done", "Achieved", "Completed"],
     answer: "Done",
   },
   {
     id: 19,
     question:
       "'Two things are infinite: the universe and human stupidity; and I’m not sure about the ____.'",
-    options: ["Universe", "World", "Intelligence", "Mind"],
+    options: ["World", "Mind", "Intelligence", "Universe"],
     answer: "Universe",
   },
   {
     id: 20,
     question: "'Do what you can, with what you have, where you ____.'",
-    options: ["Are", "Live", "Stand", "Wait"],
+    options: ["Live", "Stand", "Wait", "Are"],
     answer: "Are",
-  },
-  {
-    id: 21,
-    question: "'Everything you can imagine is ____.'",
-    options: ["Real", "Possible", "Achievable", "Doable"],
-    answer: "Real",
-  },
-  {
-    id: 22,
-    question:
-      "'In three words I can sum up everything I’ve learned about life: it goes ____.'",
-    options: ["Onward", "Quick", "Fast", "Slowly"],
-    answer: "Onward",
-  },
-  {
-    id: 23,
-    question:
-      "'It does not matter how slowly you go as long as you do not ____.'",
-    options: ["Stop", "Lose", "Fail", "Pause"],
-    answer: "Stop",
-  },
-  {
-    id: 24,
-    question: "'If you can dream it, you can ____ it.'",
-    options: ["Do", "Achieve", "Believe", "See"],
-    answer: "Do",
-  },
-  {
-    id: 25,
-    question: "'Success usually comes to those who are too busy to be ____.'",
-    options: ["Looking", "Waiting", "Thinking", "Worrying"],
-    answer: "Worrying",
-  },
-  {
-    id: 26,
-    question:
-      "'Don’t wait for the perfect moment, take the moment and make it ____.'",
-    options: ["Perfect", "Great", "Amazing", "Memorable"],
-    answer: "Perfect",
-  },
-  {
-    id: 27,
-    question: "'The best revenge is massive ____.'",
-    options: ["Success", "Action", "Effort", "Growth"],
-    answer: "Success",
-  },
-  {
-    id: 28,
-    question: "'Don’t watch the clock; do what it does. Keep ____.'",
-    options: ["Going", "Moving", "Learning", "Running"],
-    answer: "Going",
-  },
-  {
-    id: 29,
-    question: "'Do one thing every day that scares ____.'",
-    options: ["You", "Them", "Me", "Anyone"],
-    answer: "You",
-  },
-  {
-    id: 30,
-    question:
-      "'Success is not how high you have climbed, but how you make a positive ____ on the world.'",
-    options: ["Impact", "Difference", "Change", "Impression"],
-    answer: "Impact",
   },
 ];
 
