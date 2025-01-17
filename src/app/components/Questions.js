@@ -16,129 +16,129 @@ const questions = [
   {
     id: 1,
     question: "'The only thing we have to fear is ____ itself.'",
-    options: ["Nothing", "Time", "Failure", "Fear"],
+    options: ["Failure", "Time", "Fear", "Nothing"],
     answer: "Fear",
   },
   {
     id: 2,
     question: "'In the middle of every difficulty lies ____.'",
-    options: ["Hope", "Fear", "Success", "Opportunity"],
+    options: ["Hope", "Opportunity", "Success", "Fear"],
     answer: "Opportunity",
   },
   {
     id: 3,
-    question:
-      "'It is not the years in your life that count, but the ____ in your years.'",
-    options: ["Passion", "Life", "Love", "Joy"],
-    answer: "Life",
-  },
-  {
-    id: 4,
-    question:
-      "'Success is not final, failure is not ____: it is the courage to continue that counts.'",
-    options: ["End", "Fatal", "Devastating", "Permanent"],
-    answer: "Fatal",
-  },
-  {
-    id: 5,
     question: "'Be yourself; everyone else is already ____.'",
-    options: ["Lost", "A copy", "Confused", "Taken"],
+    options: ["Confused", "Gone", "Lost", "Taken"],
     answer: "Taken",
   },
   {
-    id: 6,
+    id: 4,
     question: "'The best way to predict the future is to ____ it.'",
-    options: ["Live", "Explore", "Dream", "Create"],
+    options: ["Dream", "Create", "Plan", "Imagine"],
     answer: "Create",
   },
   {
-    id: 7,
-    question: "'Don’t cry because it’s over, smile because it’s ____.'",
-    options: ["Beautiful", "Done", "Memorable", "Over"],
-    answer: "Done",
+    id: 5,
+    question: "'Don’t cry because it’s over, smile because it ____.'",
+    options: ["Lasted", "Finished", "Happened", "Ended"],
+    answer: "Happened",
   },
   {
-    id: 8,
-    question: "'Life is what happens when you're busy making other ____.'",
-    options: ["Dreams", "Plans", "Decisions", "Memories"],
+    id: 6,
+    question: "'Life is what happens when you’re busy making other ____.'",
+    options: ["Plans", "Ideas", "Dreams", "Choices"],
     answer: "Plans",
   },
   {
-    id: 9,
-    question:
-      "'To be yourself in a world that is constantly trying to make you something else is the greatest ____.'",
-    options: ["Wisdom", "Courage", "Love", "Peace"],
-    answer: "Courage",
-  },
-  {
-    id: 10,
-    question:
-      "'Not everything that is faced can be changed, but nothing can be changed until it is ____.'",
-    options: ["Accepted", "Thought", "Faced", "Recognized"],
-    answer: "Faced",
-  },
-  {
-    id: 11,
+    id: 7,
     question: "'You miss 100% of the shots you don’t ____.'",
-    options: ["Make", "Take", "Try", "Think"],
+    options: ["Try", "Make", "Plan", "Take"],
     answer: "Take",
   },
   {
-    id: 12,
+    id: 8,
     question: "'The only way to do great work is to love what you ____.'",
-    options: ["Achieve", "Create", "Try", "Do"],
+    options: ["Do", "Try", "Dream", "Achieve"],
     answer: "Do",
   },
   {
+    id: 9,
+    question: "'Believe you can and you’re ____.'",
+    options: ["Halfway there", "There", "Almost done", "On your way"],
+    answer: "Halfway there",
+  },
+  {
+    id: 10,
+    question: "'It always seems impossible until it’s ____.'",
+    options: ["Achieved", "Done", "Completed", "Over"],
+    answer: "Done",
+  },
+  {
+    id: 11,
+    question:
+      "'Success is not the key to happiness. Happiness is the key to ____.'",
+    options: ["Success", "Love", "Fulfillment", "Peace"],
+    answer: "Success",
+  },
+  {
+    id: 12,
+    question: "'Two things are infinite: the universe and human ____.'",
+    options: ["Stupidity", "Creativity", "Curiosity", "Intelligence"],
+    answer: "Stupidity",
+  },
+  {
     id: 13,
-    question: "'Life is either a daring adventure or nothing at ____.'",
-    options: ["The end", "All", "All at all", "All"],
-    answer: "All",
+    question: "'Do what you can, with what you have, where you ____.'",
+    options: ["Stand", "Are", "Live", "Begin"],
+    answer: "Are",
   },
   {
     id: 14,
-    question: "'You must be the change you wish to see in the ____.'",
-    options: ["Future", "World", "People", "Universe"],
-    answer: "World",
-  },
-  {
-    id: 15,
     question:
       "'Happiness is not something ready-made. It comes from your own ____.'",
-    options: ["Choice", "Heart", "Thoughts", "Actions"],
+    options: ["Decisions", "Actions", "Thoughts", "Dreams"],
     answer: "Actions",
   },
   {
+    id: 15,
+    question: "'Life is either a daring adventure or nothing at ____.'",
+    options: ["All", "The end", "Risk", "Start"],
+    answer: "All",
+  },
+  {
     id: 16,
-    question: "'Believe you can and you're ____.'",
-    options: ["There", "Halfway there", "On the road", "Done"],
-    answer: "Halfway there",
+    question:
+      "'Do not go where the path may lead, go instead where there is ____ and leave a trail.'",
+    options: ["Opportunity", "Hope", "Imagination", "No path"],
+    answer: "No path",
   },
   {
     id: 17,
     question:
-      "'Success is not the key to happiness. Happiness is the key to ____.'",
-    options: ["Wealth", "Success", "Love", "Peace"],
-    answer: "Success",
+      "'What lies behind us and what lies before us are tiny ____ compared to what lies within us.'",
+    options: ["Miracles", "Obstacles", "Differences", "Matters"],
+    answer: "Obstacles",
   },
   {
     id: 18,
-    question: "'It always seems impossible until it’s ____.'",
-    options: ["Over", "Done", "Achieved", "Completed"],
-    answer: "Done",
+    question:
+      "'In three words I can sum up everything I’ve learned about life: it goes ____.'",
+    options: ["On", "Fast", "Forever", "Slow"],
+    answer: "On",
   },
   {
     id: 19,
     question:
-      "'Two things are infinite: the universe and human stupidity; and I’m not sure about the ____.'",
-    options: ["World", "Mind", "Intelligence", "Universe"],
-    answer: "Universe",
+      "'Life isn’t about waiting for the storm to pass, it’s about learning how to ____ in the rain.'",
+    options: ["Dance", "Survive", "Run", "Wait"],
+    answer: "Dance",
   },
   {
     id: 20,
-    question: "'Do what you can, with what you have, where you ____.'",
-    options: ["Live", "Stand", "Wait", "Are"],
-    answer: "Are",
+    question:
+      "'It does not matter how slowly you go as long as you do not ____.'",
+    options: ["Stop", "Fall", "Get lost", "Look back"],
+    answer: "Stop",
   },
 ];
 
