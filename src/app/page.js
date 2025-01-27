@@ -6,7 +6,7 @@ export default function Home() {
     <div className="text-center space-y-8">
       {/* Updated Header */}
       <h1 className="text-5xl font-extrabold text-red-700 mb-6 leading-tight text-center">
-        🎉 Welcome to the Ultimate Quotes Quiz Challenge! 🎉
+        🎉 Welcome to Quotes Quiz Challenge! 🎉
       </h1>
       <h2 className="text-2xl text-gray-600 mb-4">
         Are you ready to test your knowledge and have a blast with friends?
