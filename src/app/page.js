@@ -4,97 +4,306 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="text-center space-y-8">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Welcome to Quotes Game
+      {/* Updated Header */}
+      <h1 className="text-5xl font-extrabold text-red-700 mb-6 leading-tight text-center">
+        🎉 Welcome to the Ultimate Quotes Quiz Challenge! 🎉
       </h1>
-      <p className="text-lg">
-        Test your knowledge of famous quotes by filling in the blanks. Compete
-        with friends and see your name on the leaderboard!
-      </p>
-      <Link
-        href="/game"
-        className="inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-2xl font-bold rounded-full shadow-lg hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
-      >
-        Start the Game
-      </Link>
+      <h2 className="text-2xl text-gray-600 mb-4">
+        Are you ready to test your knowledge and have a blast with friends?
+      </h2>
 
-      <div className="min-h-screen bg-gray-100 text-black flex flex-col items-start justify-start space-y-12 px-8 py-16">
-        {/* About Section */}
-        <div className="max-w-full space-y-6 text-lg text-gray-800">
-          <h2 className="text-3xl font-semibold text-left text-blue-500">
-            About the Game
+      {/* Updated Introduction Paragraph */}
+      <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-6 leading-relaxed">
+        Get ready to dive into a world filled with iconic quotes! Whether
+        you&apos;re a trivia whiz or just love a good challenge, our Quotes Quiz
+        is crafted just for you! Join us on this exciting adventure where you
+        can recognize famous lines from movies, literature, and pop culture.
+        Let&apos;s see how well you know the words that have shaped our culture!
+        🌟
+      </p>
+
+      {/* Updated Call to Action Button */}
+      <div className="text-center">
+        <Link
+          href="/game"
+          className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white text-2xl font-bold rounded-full shadow-lg hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all duration-300"
+        >
+          🚀 Start the Quiz Now!
+        </Link>
+      </div>
+
+      {/* Hero Image Section */}
+      <div className="flex justify-center mt-12">
+        <div className="relative w-full max-w-4xl overflow-hidden rounded-lg shadow-2xl transform transition-transform duration-500 hover:scale-105">
+          <img
+            src="/images/quotes.png"
+            alt="Quotes Quiz Poster"
+            className="w-full h-auto object-cover rounded-lg transition-all duration-500 ease-in-out transform hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30 rounded-lg"></div>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <div className="min-h-screen bg-gradient-to-b from-red-50 to-red-100 text-black flex flex-col items-center justify-start space-y-12 px-8 py-16">
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-red-700">
+            What is the Quotes Quiz?
           </h2>
-          <p className="text-left">
-            Welcome to the Quotes Game, a fun and exciting challenge where you
-            can test your knowledge of some of the most iconic quotes from
-            history, literature, movies, and pop culture. In this game,
-            you&rsquo;ll be given a series of famous quotes with a word missing,
-            and you&rsquo;ll have to choose the correct word to complete the
-            quote. Whether you&rsquo;re a history buff, a movie lover, or a
-            literature enthusiast, this game will test how well you know these
-            famous lines. You can compete with friends, see how well you score,
-            and compare your results on the leaderboard!
+          <p className="text-left leading-relaxed">
+            The Quotes Quiz is not just a game; it&apos;s an adventure! 🎈
+            You&apos;ll face 10 thrilling questions, each featuring a famous
+            quote with one word missing. Your mission? Choose the right word
+            from four options. It&apos;s simple, yet exhilarating, especially as
+            the timer counts down!
           </p>
-          <p className="text-left">
-            The game is designed for people of all ages and knowledge levels. If
-            you enjoy trivia games and love a good challenge, you&rsquo;re in
-            the right place. The faster you answer, the more points you earn, so
-            speed is key to achieving the highest score.
+          <p className="text-left leading-relaxed">
+            With every correct answer, you&apos;ll earn points. The faster you
+            answer, the more points you get! Even if you don&apos;t know all the
+            answers, you&apos;ll learn new facts and brush up on famous lines
+            from history and culture.
+          </p>
+          <p className="text-left leading-relaxed">
+            Each quiz session is a chance to revisit famous lines and discover
+            new insights about the quotes that have shaped our world. From
+            timeless wisdom to witty one-liners, each question is designed to
+            spark your curiosity and engage you in a fun intellectual challenge.
+            🌍
+          </p>
+          <div className="flex justify-center mt-8 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img
+              src="/images/QUOTE.png"
+              alt="My Favourite Quote"
+              className="rounded-xl shadow-2xl max-w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Why Play Section */}
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-blue-700">
+            Why Should You Play the Quotes Quiz?
+          </h2>
+          <p className="text-left leading-relaxed">
+            The Quotes Quiz isn&apos;t just about testing what you already know
+            – it&apos;s about learning and discovering new quotes that you might
+            not have encountered before. Each quote you see will bring you
+            closer to becoming a true trivia champion! 🏆
+          </p>
+          <p className="text-left leading-relaxed">
+            As you complete the quiz, you&apos;ll see how well you know the
+            quotes. You&apos;ll also get to learn fun facts about each quote,
+            making the game even more enjoyable. Whether you&apos;re playing
+            alone or challenging friends, the Quotes Quiz will keep you engaged
+            with exciting questions and fast-paced gameplay.
+          </p>
+          <p className="text-left leading-relaxed">
+            The Quotes Quiz brings people together! Challenge friends, family,
+            or colleagues to see who knows the most iconic lines from history,
+            movies, and books. Share your quiz results and compare scores to see
+            who truly reigns supreme as the trivia master. 🎊
           </p>
         </div>
 
-        {/* Rules Section */}
-        <div className="max-w-full space-y-6 text-lg text-gray-800">
-          <h2 className="text-3xl font-semibold text-left text-blue-500">
-            Game Rules
+        {/* Game Rules Section */}
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-blue-700">
+            Game Rules – How to Play the Quotes Quiz
           </h2>
-          <ul className="list-disc pl-6 space-y-4 text-left">
+          <ul className="list-disc pl-6 space-y-4 text-left leading-relaxed">
             <li>
-              <strong>Question Format:</strong> Each question consists of a
-              famous quote with one missing word. You will be provided with four
-              multiple-choice options, and you must select the one that
-              correctly fills in the blank.
+              <strong>Fill in the Blank:</strong> Each question presents a
+              famous quote missing one word. Select the correct word from four
+              choices. The quotes come from various media, including movies,
+              books, and speeches.
             </li>
             <li>
-              <strong>Timing:</strong> You have 5 minutes (300 seconds) to
-              answer all 10 questions. The timer will count down as you progress
-              through the quiz. If the timer runs out before you complete all
-              questions, the game will end automatically.
+              <strong>Timer is Ticking:</strong> You have 5 minutes to answer
+              all 10 questions. The clock is your enemy, so think fast! Every
+              second counts, and the quicker you answer, the higher your score.
+              ⏳
             </li>
             <li>
-              <strong>Scoring:</strong> Each correct answer earns you 10 points.
-              Your score will be updated after each question. Incorrect answers
-              do not impact your score, so feel free to guess if you&rsquo;re
-              unsure, but remember that getting more correct answers will give
-              you a higher final score.
+              <strong>Earn Points:</strong> Every correct answer gives you 10
+              points. The quicker you answer correctly, the more points
+              you&apos;ll earn! Incorrect answers don&apos;t take away points,
+              so feel free to guess if you&apos;re not sure.
             </li>
             <li>
-              <strong>Answering:</strong> You can only select one answer per
-              question, so take your time to read the options carefully before
-              choosing. Once you&rsquo;ve selected an answer, you&rsquo;ll
-              receive immediate feedback showing whether it was correct (in
-              green) or incorrect (in red).
+              <strong>Leaderboard:</strong> After finishing the quiz, submit
+              your score to the leaderboard. Compare your performance with
+              others and see if you can top the charts. 📈
             </li>
             <li>
-              <strong>Game End:</strong> The game will end either when
-              you&rsquo;ve completed all 10 questions or when the time runs out.
-              Once the game ends, your final score will be displayed, and
-              you&rsquo;ll be given the option to enter your name and submit
-              your score to the leaderboard.
-            </li>
-            <li>
-              <strong>Leaderboard:</strong> After finishing the game, you can
-              view the leaderboard to see how your score compares to others. If
-              your score is high enough, you&rsquo;ll earn a spot on the
-              leaderboard. Challenge your friends to beat your score!
-            </li>
-            <li>
-              <strong>Play Again:</strong> Once you&rsquo;ve finished the game,
-              you can click the &quot;Play Again&quot; button to start a new
-              round and try to improve your score. Challenge yourself and see if
-              you can score higher!
+              <strong>Play Again:</strong> If you didn&apos;t achieve your best
+              score, play again to improve your results. The more you play, the
+              better you&apos;ll get!
             </li>
           </ul>
+          <div className="flex justify-center mt-8 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img
+              src="/images/leaderboard.png"
+              alt="Explaining the quiz rules"
+              className="rounded-xl shadow-2xl max-w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Fun Facts Section */}
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-blue-700">
+            Fun Facts About Famous Quotes
+          </h2>
+          <p className="text-left leading-relaxed">
+            Here are some interesting tidbits about famous quotes that you may
+            encounter in the Quotes Quiz:
+          </p>
+          <ul className="list-disc pl-6 space-y-4 text-left leading-relaxed">
+            <li>
+              Did you know that the quote &quot;May the Force be with you&quot;
+              from *Star Wars* is one of the most quoted lines in movie history?
+              🌌
+            </li>
+            <li>
+              Shakespeare&apos;s famous &quot;To be, or not to be&quot; is
+              recognized even by those who have never read his work.
+            </li>
+            <li>
+              The quote &quot;Elementary, my dear Watson&quot; is often
+              attributed to Sherlock Holmes, but it never appears in the
+              original stories.
+            </li>
+            <li>
+              The phrase &quot;I think, therefore I am,&quot; by René Descartes,
+              is one of the most significant philosophical statements ever made.
+            </li>
+            <li>
+              The iconic line &quot;Hasta la vista, baby&quot;from *Terminator
+              2* became a cultural phenomenon, often used humorously in pop
+              culture. 🎬
+            </li>
+          </ul>
+        </div>
+
+        {/* Pro Tips Section */}
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-blue-700">
+            Pro Tips to Ace the Quotes Quiz
+          </h2>
+          <p className="text-left leading-relaxed">
+            Want to increase your chances of becoming a trivia champion? Here
+            are a few tips:
+          </p>
+          <ul className="list-disc pl-6 space-y-4 text-left leading-relaxed">
+            <li>
+              <strong>Speed is Key:</strong> The faster you answer correctly,
+              the more points you&apos;ll earn. Practice your speed without
+              sacrificing accuracy.
+            </li>
+            <li>
+              <strong>Learn the Quotes:</strong> Familiarize yourself with
+              famous quotes from movies, books, and history.
+            </li>
+            <li>
+              <strong>Use Context Clues:</strong> Often, you can guess the
+              correct word based on the context of the quote. Think about the
+              general meaning to narrow down your options.
+            </li>
+            <li>
+              <strong>Stay Calm:</strong> Don&apos;t let the ticking timer get
+              to you. Take a deep breath and trust your instincts. 🧘‍♂️
+            </li>
+          </ul>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="max-w-4xl w-full space-y-6 text-lg text-gray-800">
+          <h2 className="text-4xl font-semibold text-left text-red-600 transition-all duration-300 ease-in-out hover:text-blue-700">
+            Frequently Asked Questions (FAQ)
+          </h2>
+          <div className="space-y-4">
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              How do I start the quiz?
+            </h3>
+            <p className="text-left leading-relaxed ">
+              Simply click on the &quot;Start the Quiz&quot;button on the
+              homepage. You&apos;ll be taken to the quiz page where you can
+              start answering questions right away. 🎯
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              Is there a time limit?
+            </h3>
+            <p className="text-left leading-relaxed">
+              Yes, the quiz has a 5-minute timer. Try to answer as quickly as
+              possible to score higher points.
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              Can I play the quiz more than once?
+            </h3>
+            <p className="text-left leading-relaxed">
+              Absolutely! Feel free to play as many times as you want to improve
+              your score or just for fun. 🎉
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              How can I improve my score?
+            </h3>
+            <p className="text-left leading-relaxed">
+              Practice! The more you play, the faster you&apos;ll get at
+              recognizing famous quotes. Try to answer as quickly as possible
+              and learn new quotes to boost your trivia knowledge.
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              Where can I see my quiz results?
+            </h3>
+            <p className="text-left leading-relaxed">
+              After completing the quiz, you&apos;ll be shown your score. You
+              can also check the leaderboard to compare your performance with
+              other players. 📊
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              Can I share my quiz results with friends?
+            </h3>
+            <p className="text-left leading-relaxed">
+              Yes! After completing the quiz, you can easily share your results
+              on social media or directly with friends to challenge them to beat
+              your score! 📣
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              Are there any hints available during the quiz?
+            </h3>
+            <p className="text-left leading-relaxed">
+              Currently, there are no hints available, but we encourage you to
+              use your knowledge and intuition to answer the questions. Good
+              luck!
+            </p>
+            <h3 className="text-2xl font-semibold text-left text-red-600">
+              What happens if I lose my internet connection during the quiz?
+            </h3>
+            <p className="text-left leading-relaxed">
+              If you lose your internet connection, you may not be able to
+              continue the quiz. We recommend ensuring a stable connection
+              before starting. If you experience issues, you can restart the
+              quiz.
+            </p>
+          </div>
+        </div>
+
+        {/* Final Call to Action */}
+        <div className="max-w-4xl w-full text-center space-y-6">
+          <h2 className="text-4xl font-semibold text-red-600">
+            Ready to Start the Quiz? 🎉
+          </h2>
+          <p className="text-lg leading-relaxed">
+            The quotes are waiting. Test your knowledge, challenge your friends,
+            and become a trivia legend! Click below to get started and prove
+            that you&apos;re the ultimate Quotes Quiz champion! 🏅
+          </p>
+          <Link
+            href="/game"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white text-2xl font-bold rounded-full shadow-lg hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all duration-300"
+          >
+            🚀 Start the Quiz Now!
+          </Link>
         </div>
       </div>
     </div>

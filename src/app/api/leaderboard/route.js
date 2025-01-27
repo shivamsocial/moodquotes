@@ -1,56 +1,56 @@
-// file: /app/api/leaderboard/route.js or /pages/api/leaderboard.js (depending on your folder structure)
-import fs from "fs";
-import path from "path";
+import { MongoClient } from "mongodb";
 
-const leaderboardFilePath = path.join(
-  process.cwd(),
-  "public",
-  "leaderboard.json"
-);
+const client = new MongoClient(process.env.MONGODB_URI);
+const dbName = "leaderboardDB"; // Your database name
+const collectionName = "leaderboard"; // Your collection name
 
-async function readLeaderboard() {
-  const data = fs.readFileSync(leaderboardFilePath, "utf-8");
-  return JSON.parse(data);
-}
-
-async function writeLeaderboard(leaderboard) {
-  fs.writeFileSync(
-    leaderboardFilePath,
-    JSON.stringify(leaderboard, null, 2),
-    "utf-8"
-  );
+// Connect to MongoDB
+async function connectDb() {
+  // Directly connect to MongoDB, no need for isConnected check
+  await client.connect(); // Ensure connection
+  const db = client.db(dbName);
+  return db.collection(collectionName);
 }
 
 export async function GET() {
-  const leaderboard = await readLeaderboard();
-  return new Response(JSON.stringify(leaderboard), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
+  try {
+    const collection = await connectDb();
+    const leaderboard = await collection.find().sort({ score: -1 }).toArray();
+    return new Response(JSON.stringify(leaderboard), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("Error fetching leaderboard:", error);
+    return new Response(
+      JSON.stringify({ message: "Error fetching leaderboard" }),
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(request) {
-  const { name, score } = await request.json();
+  try {
+    const { name, score } = await request.json();
 
-  if (!name || !score) {
-    return new Response(JSON.stringify({ message: "Invalid data" }), {
-      status: 400,
+    if (!name || !score) {
+      return new Response(JSON.stringify({ message: "Invalid data" }), {
+        status: 400,
+      });
+    }
+
+    const collection = await connectDb();
+    await collection.insertOne({ name, score });
+
+    return new Response(JSON.stringify({ message: "Leaderboard updated" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
     });
+  } catch (error) {
+    console.error("Error updating leaderboard:", error);
+    return new Response(
+      JSON.stringify({ message: "Error updating leaderboard" }),
+      { status: 500 }
+    );
   }
-
-  const leaderboard = await readLeaderboard();
-
-  // Add the new player to the leaderboard
-  leaderboard.push({ name, score });
-
-  // Sort leaderboard by score in descending order
-  leaderboard.sort((a, b) => b.score - a.score);
-
-  // Save the updated leaderboard
-  await writeLeaderboard(leaderboard);
-
-  return new Response(JSON.stringify({ message: "Leaderboard updated" }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
 }

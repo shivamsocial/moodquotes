@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="bg-blue-600 text-white py-4 shadow-lg">
+    <header className="bg-red-600 text-white py-4 shadow-lg">
       <nav className="container mx-auto flex justify-between items-center px-4">
         <Link href="/" className="text-2xl font-bold hover:underline">
           Quotes Game

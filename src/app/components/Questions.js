@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import QuizContent from "./QuizContent"; // Import the new component
 
 // Function to shuffle an array randomly
 const shuffleArray = (array) => {
@@ -39,19 +40,19 @@ const questions = [
   },
   {
     id: 5,
-    question: "'Don’t cry because it’s over, smile because it ____.'",
+    question: "'Don't cry because it's over, smile because it ____.'",
     options: ["Lasted", "Finished", "Happened", "Ended"],
     answer: "Happened",
   },
   {
     id: 6,
-    question: "'Life is what happens when you’re busy making other ____.'",
+    question: "'Life is what happens when you're busy making other ____.'",
     options: ["Plans", "Ideas", "Dreams", "Choices"],
     answer: "Plans",
   },
   {
     id: 7,
-    question: "'You miss 100% of the shots you don’t ____.'",
+    question: "'You miss 100% of the shots you don't ____.'",
     options: ["Try", "Make", "Plan", "Take"],
     answer: "Take",
   },
@@ -63,13 +64,13 @@ const questions = [
   },
   {
     id: 9,
-    question: "'Believe you can and you’re ____.'",
+    question: "'Believe you can and you're ____.'",
     options: ["Halfway there", "There", "Almost done", "On your way"],
     answer: "Halfway there",
   },
   {
     id: 10,
-    question: "'It always seems impossible until it’s ____.'",
+    question: "'It always seems impossible until it's ____.'",
     options: ["Achieved", "Done", "Completed", "Over"],
     answer: "Done",
   },
@@ -122,14 +123,14 @@ const questions = [
   {
     id: 18,
     question:
-      "'In three words I can sum up everything I’ve learned about life: it goes ____.'",
+      "'In three words I can sum up everything I've learned about life: it goes ____.'",
     options: ["On", "Fast", "Forever", "Slow"],
     answer: "On",
   },
   {
     id: 19,
     question:
-      "'Life isn’t about waiting for the storm to pass, it’s about learning how to ____ in the rain.'",
+      "'Life isn't about waiting for the storm to pass, it's about learning how to ____ in the rain.'",
     options: ["Dance", "Survive", "Run", "Wait"],
     answer: "Dance",
   },
@@ -142,7 +143,7 @@ const questions = [
   },
 ];
 
-export default function Questions({ onComplete }) {
+export default function Questions({ onComplete, setLeaderboard }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(300);
@@ -150,6 +151,7 @@ export default function Questions({ onComplete }) {
   const [feedback, setFeedback] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [playerName, setPlayerName] = useState(""); // Track player name input
+  const [validationMessage, setValidationMessage] = useState(""); // State for validation message
 
   // Shuffle the questions array at the start
   const shuffledQuestions = useRef(
@@ -195,6 +197,7 @@ export default function Questions({ onComplete }) {
     setScore(0);
     setTimeLeft(300);
     setGameOver(false);
+    setValidationMessage(""); // Reset validation message
   };
 
   const handleSubmitName = () => {
@@ -207,13 +210,22 @@ export default function Questions({ onComplete }) {
         .then((res) => res.json())
         .then((data) => {
           console.log("Leaderboard updated:", data);
-          alert(
-            "Your score has been added to the leaderboard. Please refresh the page"
+          setValidationMessage(
+            "Your score has been added to the leaderboard. Please refresh the page."
           );
+          // Update leaderboard in parent component
+          if (setLeaderboard) {
+            setLeaderboard(data); // Update leaderboard with the response data
+          }
         })
-        .catch((err) => console.error("Error:", err));
+        .catch((err) => {
+          console.error("Error:", err);
+          setValidationMessage(
+            "An error occurred while updating the leaderboard."
+          );
+        });
     } else {
-      alert("Please enter your name");
+      setValidationMessage("Please enter your name");
     }
   };
 
@@ -226,10 +238,10 @@ export default function Questions({ onComplete }) {
   if (gameOver) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-white text-gray-800 p-8">
-        <h1 className="text-5xl font-bold mb-6 animate__animated animate__fadeIn">
+        <h1 className="text-5xl font-bold mb-6 text-red-600 animate__animated animate__fadeIn">
           Game Over!
         </h1>
-        <p className="text-2xl mb-6 animate__animated animate__fadeIn">
+        <p className="text-2xl mb-6 text-red-500 animate__animated animate__fadeIn">
           Your Score: {score}
         </p>
         {/* Input form for leaderboard */}
@@ -238,20 +250,23 @@ export default function Questions({ onComplete }) {
           placeholder="Enter your name"
           value={playerName}
           onChange={(e) => setPlayerName(e.target.value)}
-          className="mb-4 px-4 py-2 border rounded"
+          className="mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
         />
         <button
           onClick={handleSubmitName}
-          className="px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-transform transform hover:scale-105"
+          className="px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-transform transform bg-red-500 text-white hover:bg-green-600"
         >
           Submit to Leaderboard
         </button>
         <button
           onClick={handlePlayAgain}
-          className="px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-transform transform hover:scale-105 mt-4"
+          className="px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-transform transform bg-red-500 text-white hover:bg-green-600 mt-4"
         >
           Play Again
         </button>
+        {validationMessage && (
+          <span className="mt-4 text-green-500">{validationMessage}</span>
+        )}
       </div>
     );
   }
@@ -259,22 +274,23 @@ export default function Questions({ onComplete }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-800">
       {/* Timer and Score Display */}
-      <div className="flex justify-between w-full max-w-3xl px-6 py-4 mb-6 bg-white bg-opacity-90 rounded-lg shadow-lg animate__animated animate__fadeIn">
-        <div className="text-3xl font-semibold">
+      <div className="flex justify-between w-full max-w-3xl px-6 py-4 mb-6 bg-red-100 rounded-lg shadow-lg animate__animated animate__fadeIn">
+        <div className="text-3xl font-semibold text-red-600">
           ⏱️ Time Left: {formatTime(timeLeft)}
         </div>
-        <div className="text-3xl font-semibold">🏆 Score: {score}</div>
+        <div className="text-3xl font-semibold text-red-600">
+          🏆 Score: {score}
+        </div>
       </div>
-
       {/* Question and Options */}
-      <div className="w-full max-w-4xl p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
+      <div className="w-full max-w-4xl p-6 bg-white rounded-lg shadow-lg">
         <h2
           className={`text-3xl font-bold mb-6 ${
             feedback === "correct"
               ? "text-green-500 animate__animated animate__pulse animate__infinite"
               : feedback === "incorrect"
               ? "text-red-500 animate__animated animate__shakeX"
-              : ""
+              : "text-gray-800"
           }`}
         >
           {shuffledQuestions[currentQuestion].question}
@@ -310,7 +326,7 @@ export default function Questions({ onComplete }) {
         {/* Progress Bar */}
         <div className="mt-8 w-full bg-gray-300 rounded-full">
           <div
-            className="bg-blue-500 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full animate__animated animate__fadeIn"
+            className="bg-green-500 text-xs font-medium text-green-100 text-center p-1 leading-none rounded-full animate__animated animate__fadeIn"
             style={{
               width: `${
                 ((currentQuestion + 1) / shuffledQuestions.length) * 100
@@ -324,6 +340,11 @@ export default function Questions({ onComplete }) {
           </div>
         </div>
       </div>
+
+      {/* Validation Message */}
+      {validationMessage && (
+        <span className="mt-4 text-red-500">{validationMessage}</span>
+      )}
     </div>
   );
 }

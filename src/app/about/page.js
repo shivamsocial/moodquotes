@@ -9,70 +9,79 @@ const AboutPage = () => {
         {/* Main Content */}
         <div className="flex-1 p-5 max-w-3xl min-w-[300px]">
           <h1 className="text-4xl text-white font-bold mb-6">
-            Welcome to Mood Songs
+            Welcome to Quote Quiz
           </h1>
 
-          <h2 className="text-2xl text-[#4CAF50] mb-5">Our Story</h2>
+          <h2 className="text-2xl text-[#D32F2F] mb-5">Our Story</h2>
           <p className="text-lg leading-7 mb-4">
-            Mood Songs was developed on a simple idea: to match songs based on
-            mood and genre. As a passionate developer, I, Shivam Upadhyay,
-            created a platform that goes beyond playlists to offer mood and
-            genre-specific YouTube playlists.
+            Quote Quiz was created with one goal in mind: to provide a fun and
+            engaging way for people to test their knowledge of famous quotes. As
+            a developer with a passion for both literature and interactive
+            experiences, I, Shivam Upadhyay, wanted to create a platform where
+            users can explore and challenge themselves with quotes from various
+            genres and time periods.
           </p>
           <p className="text-lg leading-7 mb-6">
-            My love for music has driven me to create a space where people can
-            find the perfect song for any moment.
+            Inspired by my love for words and trivia, I developed Quote Quiz as
+            a space to bring people closer to the timeless wisdom and wit
+            captured in quotes.
           </p>
 
-          <h2 className="text-2xl text-[#4CAF50] mt-10 mb-5">Our Mission</h2>
+          <h2 className="text-2xl text-[#D32F2F] mt-10 mb-5">Our Mission</h2>
           <p className="text-lg leading-7 mb-4">
-            At Mood Songs, our mission is to make music discovery easier and
-            more personal. With just one click, anyone can access a playlist
-            that fits their mood. We cover over 20 moods and 10 languages,
-            ensuring there is always a song that matches your emotional state.
+            At Quote Quiz, our mission is simple: to make discovering and
+            learning famous quotes enjoyable. Through our quizzes, we aim to
+            educate, entertain, and challenge users with quotes that have shaped
+            history and culture.
           </p>
           <ul className="text-lg list-inside list-disc pl-5 mb-6">
             <li>
-              <strong>Purpose:</strong> Provide an intuitive platform for mood
-              and genre-based music discovery.
+              <strong>Purpose:</strong> To offer an engaging platform for
+              discovering and testing knowledge of famous quotes.
             </li>
             <li>
-              <strong>Values:</strong> Simplicity, personalization, and a deep
-              love for music.
+              <strong>Values:</strong> Fun, learning, and a deep appreciation
+              for the power of words.
             </li>
             <li>
-              <strong>Goals:</strong> To offer personalized song recommendations
-              based on mood and genre.
+              <strong>Goals:</strong> To provide a variety of quizzes that cover
+              different categories of quotes and to continuously expand our
+              database with new and exciting content.
             </li>
           </ul>
 
-          <h2 className="text-2xl text-[#4CAF50] mt-10 mb-5">
-            Why Mood Songs?
+          <h2 className="text-2xl text-[#D32F2F] mt-10 mb-5">
+            Why Quote Quiz?
           </h2>
           <ul className="text-lg list-inside list-disc pl-5 mb-6">
             <li>
-              <strong>Unique:</strong> Every song and playlist is handpicked
-              with research in all 10 languages.
+              <strong>Interactive:</strong> Our quizzes are designed to be both
+              challenging and fun, offering users a chance to test their
+              knowledge.
             </li>
             <li>
-              <strong>Global and Local:</strong> Mood Songs integrates with 10
-              languages, making music recommendations accessible worldwide.
+              <strong>Educational:</strong> Each quiz is an opportunity to learn
+              something new, whether it&apos;s a quote from a famous
+              philosopher, historical figure, or popular culture.
+            </li>
+            <li>
+              <strong>Diverse:</strong> We feature quotes from various genres,
+              ranging from literature and history to movies and music.
             </li>
           </ul>
 
-          <h2 className="text-2xl text-[#4CAF50] mt-10 mb-5">Social Proof</h2>
+          <h2 className="text-2xl text-[#D32F2F] mt-10 mb-5">Social Proof</h2>
           <p className="text-lg leading-7 mb-6">
-            Mood Songs has resonated with music enthusiasts across the internet.
-            Here’s what some of our users have said on social media:
+            Quote Quiz has quickly become a favorite among quote enthusiasts and
+            trivia lovers. Here&apos;s what some of our users have said:
           </p>
-          <blockquote className="text-xl italic border-l-4 border-[#4CAF50] pl-5 mb-6 text-yellow-500">
-            “Mood Songs is my daily go-to for finding songs that lift me up or
-            calm me down. It’s like having a musical friend who gets me.” –
-            Sarah L.
+          <blockquote className="text-xl italic border-l-4 border-[#D32F2F] pl-5 mb-6 text-yellow-500">
+            “I never knew I knew so many quotes! The quizzes are fun and I’ve
+            learned a lot!” – Lisa M.
           </blockquote>
-          <blockquote className="text-xl italic border-l-4 border-[#4CAF50] pl-5 mb-6 text-yellow-500">
-            “Finally, a platform that doesn’t just dump random playlists but
-            actually feels like it knows my vibe.” – Ankit K.
+          <blockquote className="text-xl italic border-l-4 border-[#D32F2F] pl-5 mb-6 text-yellow-500">
+            “A perfect blend of entertainment and education. I’m hooked on these
+            quizzes!” – John D.
           </blockquote>
         </div>
 
@@ -84,7 +93,7 @@ const AboutPage = () => {
               alt="Shivam Upadhyay Photo"
               width={200}
               height={200}
-              className="rounded-full border-4 border-[#4CAF50]"
+              className="rounded-full border-4 border-[#D32F2F]"
             />
           </div>
           <h3 className="text-2xl text-gray-800 mb-5">Connect with Me</h3>
@@ -107,11 +116,11 @@ const AboutPage = () => {
           </ul>
 
           <h2 className="text-2xl text-gray-800 mt-10 mb-5">
-            Join the Mood Songs Community
+            Join the Quote Quiz Community
           </h2>
           <p className="text-lg leading-7 mb-6">
-            We’re not just a website; we’re a community of music lovers. Join us
-            on this journey.
+            We’re building a community of quote lovers, trivia enthusiasts, and
+            learners. Join us and put your knowledge to the test!
           </p>
         </div>
       </div>

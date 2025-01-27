@@ -2,6 +2,7 @@
 import Question from "../components/Questions";
 import Timer from "../components/Timer";
 import Leaderboard from "../components/Leaderboard";
+import QuizContent from "../components/QuizContent";
 
 export default function GamePage({ title }) {
   const pageTitle = title
@@ -22,6 +23,7 @@ export default function GamePage({ title }) {
         <Timer />
         <Question />
         <Leaderboard />
+        <QuizContent />
       </div>
     </>
   );

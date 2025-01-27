@@ -33,7 +33,7 @@ const Contact = () => {
         </ul>
 
         <h2 className="text-2xl text-gray-800 mt-10 mb-6">
-          Join the Mood Songs Community
+          Join the Quiz Quotes Community
         </h2>
 
         <div></div>
