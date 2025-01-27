@@ -5,21 +5,21 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Quotes Game - Guess the Quotes Quiz",
+  title: "Quotes Quiz - Guess the Quotes Quiz",
   description:
-    "Test your knowledge of famous quotes in this fun quotes game. Play now and see how many quotes you can guess! Compete on the leaderboard with friends and players around the world.",
+    "Test your knowledge of famous quotes in this fun quotes quiz. Play now and see how many quotes you can guess! Compete on the leaderboard with friends and players around the world.",
   keywords:
-    "quotes game, quotes quiz, guess the quotes, quote game, quote challenge, quiz game, famous quotes, fun quiz, guess the quote, trivia game, leaderboard",
+    "quotes quiz, guess the quotes, quote quiz, quote challenge, quiz quiz, famous quotes, fun quiz, guess the quote, trivia game, leaderboard",
   author: "Your Name",
   openGraph: {
-    title: "Quotes Game - Guess the Quotes Quiz",
+    title: "Quotes Quiz - Guess the Quotes Quiz",
     description:
-      "Test your knowledge of famous quotes in this fun quotes game. Play now and see how many quotes you can guess!",
-    url: "https://www.quotesgame.com",
+      "Test your knowledge of famous quotes in this fun quotes Quiz. Play now and see how many quotes you can guess!",
+    url: "https://www.mood2quotes.com",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@quotesgame",
+    site: "@quotesquiz",
     creator: "@yourhandle",
   },
   icons: {
