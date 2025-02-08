@@ -23,7 +23,6 @@ export default function GamePage({ title }) {
         <Timer />
         <Question />
         <Leaderboard />
-        <QuizContent />
       </div>
     </>
   );

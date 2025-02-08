@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
             Privacy Policy for Mood2Quotes
           </h1>
           <p className="text-center italic text-gray-600">
-            <strong>Last Updated: January 27, 2024</strong>
+            <strong>Last Updated: February 08, 2025</strong>
           </p>
 
           <section className="mb-8">

@@ -5,21 +5,21 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Quotes Quiz - Guess the Quotes Quiz",
+  title: "Bible Quotes Quiz - Test Your Knowledge of Scripture",
   description:
-    "Test your knowledge of famous quotes in this fun quotes quiz. Play now and see how many quotes you can guess! Compete on the leaderboard with friends and players around the world.",
+    "Challenge yourself with this Bible Quotes Quiz! See how well you know the Word of God by guessing famous Bible verses. Play now and grow your knowledge of scripture!",
   keywords:
-    "quotes quiz, guess the quotes, quote quiz, quote challenge, quiz quiz, famous quotes, fun quiz, guess the quote, trivia game, leaderboard",
+    "Bible quiz, scripture quiz, Bible verses, guess the Bible quote, Bible trivia, Christian quiz, faith-based quiz, New Testament, Old Testament, religious quiz",
   author: "Your Name",
   openGraph: {
-    title: "Quotes Quiz - Guess the Quotes Quiz",
+    title: "Bible Quotes Quiz - Test Your Knowledge of Scripture",
     description:
-      "Test your knowledge of famous quotes in this fun quotes Quiz. Play now and see how many quotes you can guess!",
+      "See how well you know the Word of God by guessing famous Bible verses in this engaging quiz. Play now and strengthen your faith!",
     url: "https://www.mood2quotes.com",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@quotesquiz",
+    site: "@biblequotesquiz",
     creator: "@yourhandle",
   },
   icons: {

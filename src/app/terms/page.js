@@ -6,17 +6,17 @@ const TermsAndConditions = () => {
     <>
       <div className="mx-auto p-5 max-w-3xl bg-gray-100 text-gray-800">
         <h1 className="text-center text-3xl text-red-600 font-semibold mb-6">
-          Terms and Conditions for Quotes Quiz
+          Terms and Conditions for Bible Quotes Quiz
         </h1>
         <p className="text-lg mb-4">
-          <strong>Last Updated: January 27, 2025</strong>
+          <strong>Last Updated: February 8, 2025</strong>
         </p>
 
         <section className="mb-6">
           <h2 className="text-xl text-red-600 mt-4 mb-2">1. Introduction</h2>
           <p className="text-base leading-7 mb-4">
-            These Terms and Conditions govern your use of the Quotes Quiz
-            website (accessible from{" "}
+            These Terms and Conditions govern your use of the Bible Quotes Quiz
+            website (accessible from&nbsp;
             <Link
               href="https://www.mood2quotes.com/"
               className="text-blue-600 hover:underline"
@@ -24,22 +24,20 @@ const TermsAndConditions = () => {
               https://www.mood2quotes.com
             </Link>
             ). By accessing and using this website, you agree to comply with
-            these Terms. If you do not agree to these Terms, you must refrain
-            from using the website.
+            these Terms. If you do not agree to these Terms, please refrain from
+            using the website.
           </p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-xl text-red-600 mt-4 mb-2">
-            2. Use of the Website
+            2. Purpose of the Website
           </h2>
           <p className="text-base leading-7 mb-4">
-            Quotes Quiz offers free quiz-based experiences with various quotes
-            from famous personalities. You are allowed to browse the content and
-            use the website for personal, non-commercial purposes. Any other
-            use, including but not limited to, modifying, copying, or
-            distributing the content, is prohibited without our express written
-            consent.
+            Bible Quotes Quiz is designed to help users engage with and learn
+            from biblical scriptures through interactive quizzes. The quizzes
+            contain Bible verses sourced from public domain translations or
+            referenced according to fair use guidelines.
           </p>
         </section>
 
@@ -48,21 +46,19 @@ const TermsAndConditions = () => {
             3. Content Ownership
           </h2>
           <p className="text-base leading-7 mb-4">
-            All content displayed on Quotes Quiz is sourced from third-party
-            services. Quotes Quiz does not own or control the quotes/content
-            displayed on our website. By using the website, you acknowledge that
-            all content is owned by the respective copyright holders, and you
-            agree to comply with the respective terms of service.
+            All Bible verses featured in the quizzes are either in the public
+            domain or used under applicable fair use principles. Users
+            acknowledge that scripture texts belong to their respective
+            publishers when sourced from copyrighted versions.
           </p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-xl text-red-600 mt-4 mb-2">4. User Data</h2>
           <p className="text-base leading-7 mb-4">
-            We respect your privacy and are committed to protecting your data.
-            We do not collect or store any personally identifiable information
-            (PII). The only data stored is quiz metadata used solely to provide
-            relevant content to users. For more information, please refer to our{" "}
+            We respect your privacy and do not collect personally identifiable
+            information (PII). The only data stored is quiz metadata to improve
+            user experience. For details, please review our&nbsp;
             <Link href="/privacy" className="text-blue-600 hover:underline">
               Privacy Policy
             </Link>
@@ -82,34 +78,27 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl text-red-600 mt-4 mb-2">6. Restrictions</h2>
-          <p className="text-base leading-7 mb-4">
-            You are prohibited from using the website in any manner that:
-          </p>
+          <h2 className="text-xl text-red-600 mt-4 mb-2">
+            6. Prohibited Activities
+          </h2>
+          <p className="text-base leading-7 mb-4">Users must not:</p>
           <ul className="ml-5 list-disc text-base mb-4">
-            <li>Violates applicable laws or regulations.</li>
-            <li>Infringes the intellectual property rights of others.</li>
+            <li>Misrepresent scripture or quiz content.</li>
+            <li>Engage in harmful or offensive behavior on the platform.</li>
             <li>
-              Attempts to interfere with the functioning of the website or its
-              services.
-            </li>
-            <li>
-              Engages in harmful activities such as distributing malware or
-              attempting to access unauthorized areas.
+              Attempt to exploit the website’s functionalities for unauthorized
+              purposes.
             </li>
           </ul>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl text-red-600 mt-4 mb-2">
-            7. Disclaimer of Warranties
-          </h2>
+          <h2 className="text-xl text-red-600 mt-4 mb-2">7. Disclaimer</h2>
           <p className="text-base leading-7 mb-4">
-            Quotes Quiz provides the website and its services &quot;as is&quot;
-            and without warranties of any kind, either express or implied. We do
-            not guarantee the accuracy, reliability, or completeness of the
-            content displayed. We are not responsible for any errors,
-            interruptions, or delays in the website&apos;s operation.
+            The Bible Quotes Quiz is provided &quot;as is.&quot; We strive for
+            accuracy but do not guarantee the correctness of biblical
+            references. Users are encouraged to verify scriptures with their
+            preferred Bible translations (2 Timothy 3:16).
           </p>
         </section>
 
@@ -118,10 +107,9 @@ const TermsAndConditions = () => {
             8. Limitation of Liability
           </h2>
           <p className="text-base leading-7 mb-4">
-            To the maximum extent permitted by applicable law, Quotes Quiz shall
-            not be liable for any indirect, incidental, special, or
-            consequential damages arising out of or in connection with the use
-            of the website.
+            To the maximum extent permitted by law, we shall not be liable for
+            for any indirect, incidental, special, or consequential damages
+            arising out of or in connection with the use of the website.
           </p>
         </section>
 
@@ -131,8 +119,8 @@ const TermsAndConditions = () => {
             We reserve the right to modify, suspend, or discontinue the website
             and its services at any time without notice. We may also update
             these Terms and Conditions from time to time. Any changes will be
-            posted on this page with an updated &quotLast Updated&quot; date. We
-            encourage you to review these Terms periodically.
+            posted on this page with an updated &quot;Last Updated&quot; date.
+            We encourage you to review these Terms periodically.{" "}
           </p>
         </section>
 
@@ -140,8 +128,8 @@ const TermsAndConditions = () => {
           <h2 className="text-xl text-red-600 mt-4 mb-2">10. Governing Law</h2>
           <p className="text-base leading-7 mb-4">
             These Terms and Conditions are governed by the laws of the country
-            or state in which Quotes Quiz operates. By using the website, you
-            consent to the exclusive jurisdiction of the courts in that
+            or state in which Bible Quotes Quiz operates. By using the website,
+            you consent to the exclusive jurisdiction of the courts in that
             jurisdiction in any dispute arising out of or relating to the use of
             the website.
           </p>
@@ -155,7 +143,7 @@ const TermsAndConditions = () => {
           </p>
           <ul className="list-none pl-0">
             <li className="mb-4">
-              <strong>Email:</strong>{" "}
+              <strong>Email:</strong>
               <Link
                 href="mailto:shivamupadhyaysocial@gmail.com"
                 className="text-blue-600 hover:underline"
@@ -164,7 +152,7 @@ const TermsAndConditions = () => {
               </Link>
             </li>
             <li className="mb-4">
-              <strong>Contact Page:</strong>{" "}
+              <strong>Contact Page:</strong>
               <Link href="/contact" className="text-blue-600 hover:underline">
                 https://www.mood2quotes.com/contact
               </Link>
