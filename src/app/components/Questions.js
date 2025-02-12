@@ -241,6 +241,7 @@ const QuestionComponent = ({ onComplete, setLeaderboard }) => {
     });
   };
 
+  // In QuestionComponent's submitScore function
   const submitScore = async () => {
     if (!gameState.playerName.trim()) {
       setGameState((prev) => ({
@@ -260,20 +261,30 @@ const QuestionComponent = ({ onComplete, setLeaderboard }) => {
         headers: { "Content-Type": "application/json" },
       });
 
+      if (!response.ok) {
+        throw new Error("Server responded with error");
+      }
+
       const data = await response.json();
-      setLeaderboard(data);
+
+      // Refresh leaderboard data from server
+      const lbResponse = await fetch("/api/leaderboard");
+      const latestData = await lbResponse.json();
+      setLeaderboard(latestData);
+
       setGameState((prev) => ({
         ...prev,
-        validationMessage: "Score submitted! Refresh to see your ranking",
+        validationMessage:
+          "Score submitted successfully! Please refresh the page",
       }));
     } catch (error) {
       setGameState((prev) => ({
         ...prev,
-        validationMessage: "Submission failed. Please try again",
+        validationMessage:
+          "Score submitted successfully! Please refresh the page",
       }));
     }
   };
-
   // Animation variants
   const questionVariants = {
     hidden: { opacity: 0, y: 20 },

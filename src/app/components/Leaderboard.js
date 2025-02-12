@@ -7,18 +7,17 @@ export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [isQuizStarted, setIsQuizStarted] = useState(false);
 
-  // Fetch leaderboard data when the component mounts
-  useEffect(() => {
-    const fetchLeaderboard = async () => {
-      try {
-        const response = await fetch("/api/leaderboard");
-        const data = await response.json();
-        setLeaderboard(data);
-      } catch (error) {
-        console.error("Error fetching leaderboard:", error);
-      }
-    };
+  const fetchLeaderboard = async () => {
+    try {
+      const response = await fetch("/api/leaderboard");
+      const data = await response.json();
+      setLeaderboard(data);
+    } catch (error) {
+      console.error("Error fetching leaderboard:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchLeaderboard();
   }, []);
 
