@@ -61,35 +61,23 @@ export default function Home() {
     <div className="text-center space-y-8 overflow-hidden">
       {/* Hero Section */}
       <motion.header
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="relative py-28 bg-gradient-to-br from-yellow-400 via-orange-500 to-orange-600 text-white overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')]" />
         <div className="max-w-6xl mx-auto px-4 relative">
-          <motion.h1
-            initial={{ scale: 0.95 }}
-            animate={{ scale: 1 }}
-            className="text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-xl bg-gradient-to-r from-amber-200 to-white bg-clip-text text-transparent"
-          >
+          <motion.h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-xl bg-gradient-to-r from-amber-200 to-white bg-clip-text text-transparent">
             <span className="text-black">✝️</span> Bible Quotes Quiz
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             className="text-2xl mb-8 font-medium max-w-2xl mx-auto"
           >
             Deepen your faith and knowledge of Scripture through engaging
             quizzes and challenges.
           </motion.p>
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 100 }}
-          >
+          <motion.div transition={{ type: "spring", stiffness: 100 }}>
             <Link
               href="/game"
               className="inline-flex items-center px-8 py-4 space-x-3 bg-white text-purple-800 text-xl md:text-2xl font-black rounded-full transition-all hover:scale-105 shadow-2xl hover:shadow-purple-200 ring-4 ring-white/30"
@@ -101,8 +89,6 @@ export default function Home() {
           </motion.div>
           {/* Live Stats */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="mt-16 flex justify-center gap-6 flex-wrap"
           >
@@ -116,12 +102,7 @@ export default function Home() {
       {/* About Section */}
       <SectionWrapper>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6 text-left"
-          >
+          <motion.div className="space-y-6 text-left">
             <h2 className="text-4xl font-black bg-gradient-to-r from-purple-800 to-blue-700 bg-clip-text text-transparent">
               Why Bible Quotes Quiz?
             </h2>
@@ -149,12 +130,7 @@ export default function Home() {
             </ul>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative h-96 rounded-2xl overflow-hidden shadow-xl border-8 border-white"
-          >
+          <motion.div className="relative h-96 rounded-2xl overflow-hidden shadow-xl border-8 border-white">
             <Image
               src="/images/leaderboard.png"
               alt="Bible study interface preview"
@@ -197,8 +173,6 @@ export default function Home() {
       <SectionWrapper>
         <div className="max-w-xl mx-auto text-center space-y-6">
           <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl font-bold"
           >
@@ -206,8 +180,6 @@ export default function Home() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-lg text-gray-600"
           >
@@ -215,8 +187,6 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
@@ -239,8 +209,6 @@ export default function Home() {
                     ? "bg-blue-500 text-white scale-105"
                     : "bg-white text-gray-800 hover:bg-blue-100"
                 }`}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
                     transition={{
                       delay: 0.3 + index * 0.1,
                       duration: 0.4,
@@ -265,8 +233,6 @@ export default function Home() {
 
             {sampleFeedback && (
               <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="mt-4 text-lg font-medium text-green-600"
               >
@@ -275,8 +241,6 @@ export default function Home() {
             )}
 
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mt-2 text-gray-600 text-sm"
             >
@@ -312,10 +276,7 @@ export default function Home() {
           ].map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-purple-100 transition-all"
             >
               <p className="text-gray-600 italic mb-4">
@@ -339,10 +300,7 @@ export default function Home() {
           {faqs.map((faq, index) => (
             <motion.div
               key={faq.question}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-white p-5 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
@@ -360,8 +318,6 @@ export default function Home() {
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.p
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     className="text-gray-600 pt-3"
                   >
@@ -380,9 +336,6 @@ export default function Home() {
 // Reusable Components
 const SectionWrapper = ({ children, bg = "light" }) => (
   <motion.section
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
     className={`py-16 px-4 ${
       bg === "dark"
         ? "bg-gray-900 text-white"

@@ -325,8 +325,6 @@ const QuestionComponent = ({ onComplete, setLeaderboard }) => {
           <AnimatePresence mode="wait">
             <motion.div
               key={gameState.currentQuestion}
-              initial="hidden"
-              animate="visible"
               exit="exit"
               variants={questionVariants}
               transition={{ duration: 0.3 }}
@@ -385,7 +383,6 @@ const QuestionComponent = ({ onComplete, setLeaderboard }) => {
         <div className="max-w-md mx-auto px-4 py-16 text-center">
           <motion.div
             initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
             className="bg-white rounded-2xl shadow-xl p-8"
           >
             <h1 className="text-4xl font-bold mb-4 text-blue-600">
