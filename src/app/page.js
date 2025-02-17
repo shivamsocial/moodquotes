@@ -64,7 +64,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="relative py-28 bg-gradient-to-br from-yellow-400 via-orange-500 to-orange-600 text-white overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')]" />
+        <div className="absolute inset-0 opacity-10" />
         <div className="max-w-6xl mx-auto px-4 relative">
           <motion.h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-xl bg-gradient-to-r from-amber-200 to-white bg-clip-text text-transparent">
             <span className="text-black">✝️</span> Bible Quotes Quiz
