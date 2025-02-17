@@ -87,15 +87,6 @@ export default function Home() {
               <span className="opacity-70">→</span>
             </Link>
           </motion.div>
-          {/* Live Stats */}
-          <motion.div
-            transition={{ delay: 0.5 }}
-            className="mt-16 flex justify-center gap-6 flex-wrap"
-          >
-            <StatBadge icon="👥" value="50,000+" label="Active Learners" />
-            <StatBadge icon="📖" value="1,000+" label="Scripture Verses" />
-            <StatBadge icon="🌍" value="100+" label="Countries" />
-          </motion.div>
         </div>
       </motion.header>
 
